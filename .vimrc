@@ -17,6 +17,7 @@ set shiftwidth=4 " 자동 들여쓰기 너비 설정
 set showmatch " 일치하는 괄호 하이라이팅
 set smartcase " 검색시 대소문자 구별
 set smarttab
+set mouse=a
 set smartindent
 set softtabstop=4
 set tabstop=4
@@ -36,5 +37,10 @@ endif
 if has("syntax")
  syntax on
 endif
+call vundle #begin()
+Plugin 'The-NERD-tree'
+let NERDTreeWinPos = "left"
+nmap <F7> :NERDTree<CR>
+call vundle #end()
 " 컬러 스킴 사용
 colorscheme jellybeans
