@@ -37,10 +37,16 @@ endif
 if has("syntax")
  syntax on
 endif
-call vundle #begin()
-Plugin 'The-NERD-tree'
-let NERDTreeWinPos = "left"
-nmap <F7> :NERDTree<CR>
-call vundle #end()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+	Plugin 'VundleVim/Vundle.vim'
+
+	" vim 하단에 파일 정보 띄우기
+	Plugin 'vim-airline/vim-airline' 
+	Plugin 'vim-airline/vim-airline-themes'
+	Plugin 'The-NERD-tree'
+	let NERDTreeWinPos = "left"
+	nmap <F7> :NERDTree<CR>
+call vundle#end()
 " 컬러 스킴 사용
-colorscheme jellybeans
+" colorscheme jellybeans
